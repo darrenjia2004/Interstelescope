@@ -46,7 +46,7 @@ public class PlayerCollision : MonoBehaviour
         anim.SetTrigger("death");
         rb.bodyType = RigidbodyType2D.Static;
     }
-    private void TakeDamage()
+    public void TakeDamage()
     {
         Debug.Log("damage");
         health--;
