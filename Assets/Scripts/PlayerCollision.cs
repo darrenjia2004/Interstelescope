@@ -43,8 +43,9 @@ public class PlayerCollision : MonoBehaviour
     {
         Destroy(engine);
         Destroy(engineEffect);
-        anim.SetTrigger("death");
         rb.bodyType = RigidbodyType2D.Static;
+        anim.SetTrigger("death");
+        
     }
     public void TakeDamage()
     {

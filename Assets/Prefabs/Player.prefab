@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5466953046969908354}
   - component: {fileID: 5466953046969908355}
   - component: {fileID: 5466953046969908352}
+  - component: {fileID: 8294073174943621481}
+  - component: {fileID: 5866936616266916899}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -156,6 +158,41 @@ MonoBehaviour:
   rotationSpeed: 60
   dragRatio: 0.8
   speed: 0.01
+--- !u!50 &8294073174943621481
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466953046969908353}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &5866936616266916899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466953046969908353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 935dd37e09510d040b3e9fbc38af30c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engine: {fileID: 5466953047949676740}
+  engineEffect: {fileID: 5466953047345350347}
 --- !u!1 &5466953047345350347
 GameObject:
   m_ObjectHideFlags: 0
