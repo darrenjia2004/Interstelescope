@@ -1192,6 +1192,7 @@ GameObject:
   - component: {fileID: 1451316527}
   - component: {fileID: 1451316526}
   - component: {fileID: 1451316528}
+  - component: {fileID: 1451316529}
   m_Layer: 0
   m_Name: Nautolan Ship - Frigate - Base
   m_TagString: Untagged
@@ -1240,7 +1241,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 40c2b832ceef31d4694698fd7770c0d1, type: 3}
+  m_Sprite: {fileID: -130001817, guid: d8b5cb854ddad8845b85bffd3347da1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1287,6 +1288,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &1451316529
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451316525}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1333334, y: 2.1333334}
+    newSize: {x: 2.1333334, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.16047303, y: 0.57848835}
+      - {x: 0.014417887, y: 0.5846822}
+      - {x: -0.14728719, y: 0.5867131}
+      - {x: -0.32544267, y: 0.50529474}
+      - {x: -0.48648107, y: 0.4672323}
+      - {x: -0.5189145, y: 0.34482157}
+      - {x: -0.48126793, y: 0.22913158}
+      - {x: -0.31948084, y: 0.118813545}
+      - {x: -0.18051921, y: -0.38321722}
+      - {x: 0.0094572455, y: -0.42038}
+      - {x: 0.18231755, y: -0.37465918}
+      - {x: 0.28208578, y: 0.10855819}
+      - {x: 0.48777628, y: 0.21900344}
+      - {x: 0.53615, y: 0.35161066}
+      - {x: 0.4740938, y: 0.47669002}
+      - {x: 0.33929473, y: 0.50619364}
 --- !u!1 &1454721159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1529,7 @@ GameObject:
   - component: {fileID: 1517177133}
   - component: {fileID: 1517177132}
   - component: {fileID: 1517177134}
+  - component: {fileID: 1517177135}
   m_Layer: 0
   m_Name: Nautolan Ship - Scout - Base
   m_TagString: Untagged
@@ -1535,7 +1578,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 965ba8f2f5bc7ad48b39ddc0e752254c, type: 3}
+  m_Sprite: {fileID: -1701245688, guid: c94f952b5de05b74ab49d00057ad0a59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1582,6 +1625,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &1517177135
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517177131}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1333334, y: 2.1333334}
+    newSize: {x: 2.1333334, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.15289804, y: 0.12916416}
+      - {x: -0.14701054, y: 0.12916416}
+      - {x: -0.27028716, y: 0.062772065}
+      - {x: -0.38215363, y: -0.054891057}
+      - {x: -0.2586031, y: -0.19800687}
+      - {x: -0.0724632, y: -0.29972553}
+      - {x: 0.0019936226, y: -0.4841469}
+      - {x: 0.08034338, y: -0.29573935}
+      - {x: 0.28795016, y: -0.15099658}
+      - {x: 0.37037814, y: -0.056884438}
+      - {x: 0.31349432, y: 0.023459539}
 --- !u!1 &1593439794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,6 +1756,7 @@ GameObject:
   - component: {fileID: 1681843159}
   - component: {fileID: 1681843158}
   - component: {fileID: 1681843160}
+  - component: {fileID: 1681843161}
   m_Layer: 0
   m_Name: Main Ship - Base - Full health
   m_TagString: Untagged
@@ -1772,6 +1852,39 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &1681843161
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681843157}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2, y: 1.2}
+    newSize: {x: 1.6, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.0045170784, y: 0.2835991}
+      - {x: -0.09263331, y: 0.06647332}
+      - {x: -0.23096633, y: -0.060256556}
+      - {x: -0.23375094, y: -0.2669117}
+      - {x: 0.007552743, y: -0.20179224}
+      - {x: 0.2546621, y: -0.27106622}
+      - {x: 0.2546621, y: -0.06855343}
+      - {x: 0.09076242, y: 0.06842053}
 --- !u!1 &1682811369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1896,7 @@ GameObject:
   - component: {fileID: 1682811371}
   - component: {fileID: 1682811370}
   - component: {fileID: 1682811372}
+  - component: {fileID: 1682811373}
   m_Layer: 0
   m_Name: Nautolan Ship - Battlecruiser - Base
   m_TagString: Untagged
@@ -1831,7 +1945,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 150172f4fdb15194cbc7f6ea1693fcc0, type: 3}
+  m_Sprite: {fileID: 448629415, guid: ba77700b24be5b842adca107229460e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1878,6 +1992,54 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &1682811373
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682811369}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.266667, y: 4.266667}
+    newSize: {x: 4.266667, y: 4.266667}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.6247455, y: 0.4908231}
+      - {x: 0.4870019, y: 0.60471714}
+      - {x: 0.34318495, y: 0.87353987}
+      - {x: 0.505042, y: 1.0647198}
+      - {x: 0.50152975, y: 1.2637414}
+      - {x: 0.18941069, y: 1.383036}
+      - {x: -0.1890552, y: 1.3831245}
+      - {x: -0.5110256, y: 1.2696714}
+      - {x: -0.5108834, y: 1.0617409}
+      - {x: -0.3343649, y: 0.8823597}
+      - {x: -0.49931705, y: 0.59793675}
+      - {x: -0.71981966, y: 0.4060452}
+      - {x: -0.7311192, y: 0.024610579}
+      - {x: -0.5469115, y: -0.25380534}
+      - {x: -0.55337334, y: -0.58886385}
+      - {x: -0.22060192, y: -0.60416067}
+      - {x: -0.1372276, y: -0.76403624}
+      - {x: 0.1313862, y: -0.7640361}
+      - {x: 0.22953841, y: -0.5859387}
+      - {x: 0.57146764, y: -0.582055}
+      - {x: 0.5631623, y: -0.25320923}
+      - {x: 0.73975205, y: 0.025329173}
+      - {x: 0.7202163, y: 0.39919505}
 --- !u!1 &2025801503
 GameObject:
   m_ObjectHideFlags: 0
