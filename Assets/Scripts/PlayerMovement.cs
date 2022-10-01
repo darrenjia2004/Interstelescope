@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 7f;
     public float jumpForce = 17f;
     [SerializeField] private LayerMask jumpableGround;
-    private enum MovementState { idle, running};
+    private bool dead=false;
+    private enum MovementState { idle, running, jumping };
     // Start is called before the first frame update
     void Start()
     {
@@ -26,17 +27,21 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump")) //jumps or double jumps depending on grounded
+        if (!dead)
         {
-            if (IsGrounded())
+            dirX = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+
+            if (Input.GetButtonDown("Jump")) //jumps or double jumps depending on grounded
             {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                if (IsGrounded())
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                }
             }
+            UpdateAnimationState();
         }
-        UpdateAnimationState();
+        
     }
     private bool IsGrounded()
     {
@@ -59,13 +64,20 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.idle;
         }
+
+        if (rb.velocity.y > .1f || rb.velocity.y < -.1f)
+        {
+            state = MovementState.jumping;
+        }
+
         anim.SetInteger("state", (int)state);
     }
 
     private void Die()
     {
         anim.SetTrigger("death");
-        rb.bodyType = RigidbodyType2D.Static;
+        dead = true;
+        //rb.bodyType = RigidbodyType2D.Static;
     }
 
     public void RestartLevel()
