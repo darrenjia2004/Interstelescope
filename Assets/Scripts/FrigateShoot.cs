@@ -16,7 +16,7 @@ public class FrigateShoot : MonoBehaviour
         
     }
 
-    private void BeginShooting()
+    public void BeginShooting()
     {
         anim.SetInteger("state", 1);
     }
