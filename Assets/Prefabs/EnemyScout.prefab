@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8027558917996490678}
   - component: {fileID: 8641215139413007417}
   m_Layer: 0
-  m_Name: Nautolan Ship - Scout - Base
+  m_Name: EnemyScout
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

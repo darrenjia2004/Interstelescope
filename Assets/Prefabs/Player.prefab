@@ -155,9 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3f841fa9a5584438dc82c7695177ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 60
-  dragRatio: 0.8
-  speed: 0.01
+  rotationSpeed: 150
+  speed: 5
 --- !u!50 &8294073174943621481
 Rigidbody2D:
   serializedVersion: 4
@@ -171,8 +170,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 0.3
+  m_AngularDrag: 153
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
