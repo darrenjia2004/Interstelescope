@@ -293,6 +293,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Nautolan Ship - Bomber_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e15971caecb7eb4a9f923e8892b584b
+      internalID: -1252927346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -309,6 +330,7 @@ TextureImporter:
       Nautolan Ship - Bomber_4: -1871511074
       Nautolan Ship - Bomber_3: 1616548449
       Nautolan Ship - Bomber_5: -1994301011
+      Nautolan Ship - Bomber_9: -1252927346
       Nautolan Ship - Bomber_1: 1981373991
       Nautolan Ship - Bomber_8: 683892733
       Nautolan Ship - Bomber_6: -2050558118

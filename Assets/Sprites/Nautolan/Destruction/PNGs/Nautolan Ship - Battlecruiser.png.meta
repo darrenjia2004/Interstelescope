@@ -356,6 +356,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Nautolan Ship - Battlecruiser_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09162c5edb28881409912c32a6ace6cf
+      internalID: -638633809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -376,6 +397,7 @@ TextureImporter:
       Nautolan Ship - Battlecruiser_10: 1321454638
       Nautolan Ship - Battlecruiser_6: 741187206
       Nautolan Ship - Battlecruiser_9: 2019880960
+      Nautolan Ship - Battlecruiser_12: -638633809
       Nautolan Ship - Battlecruiser_5: 1423179384
       Nautolan Ship - Battlecruiser_1: -993139369
       Nautolan Ship - Battlecruiser_4: -1957155601
