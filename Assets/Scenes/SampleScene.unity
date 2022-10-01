@@ -735,6 +735,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2387777333165988436, guid: 13d00fc9aa1f34e4bad990fc59fe8f19, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2387777333165988440, guid: 13d00fc9aa1f34e4bad990fc59fe8f19, type: 3}
       propertyPath: m_Name
       value: BigAsteroid
