@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollision : MonoBehaviour
+public class AsteroidCollision : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody2D rb;
     private Animator anim;
-    private SpriteRenderer spriteRenderer;
     public int health;
-    [SerializeField] GameObject engineEffect;
+    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,32 +27,20 @@ public class EnemyCollision : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (health <= 0) return;
-        if (collision.gameObject.CompareTag("Asteroid"))
-        {
-            int min = collision.gameObject.GetComponent<AsteroidCollision>().health;
-            if (health < min)
-            {
-                min = health;
-            }
-            
-            collision.gameObject.GetComponent<AsteroidCollision>().TakeDamage(min);
-            TakeDamage(min);
-        }
+        
 
     }
     private void Die()
     {
-        Destroy(engineEffect);
         anim.SetTrigger("death");
         rb.bodyType = RigidbodyType2D.Static;
         rb.simulated = false;
-        
+
     }
     public void TakeDamage(int damage)
     {
         Debug.Log("damage");
-        health-=damage;
+        health -= damage;
         if (health <= 0)
         {
             Die();

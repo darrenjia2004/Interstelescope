@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5866936616266916899}
   m_Layer: 0
   m_Name: PlayerShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 935dd37e09510d040b3e9fbc38af30c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 4
   engine: {fileID: 5466953047949676740}
   engineEffect: {fileID: 5466953047345350347}
 --- !u!1 &5466953047345350347

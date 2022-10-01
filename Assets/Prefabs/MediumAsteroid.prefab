@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6964840362079078167}
   - component: {fileID: 6964840362079078170}
   - component: {fileID: 6964840362079078169}
+  - component: {fileID: 3121693854349921495}
+  - component: {fileID: 2078391254338144627}
   m_Layer: 0
   m_Name: MediumAsteroid
   m_TagString: Asteroid
@@ -123,3 +125,36 @@ CapsuleCollider2D:
   m_Offset: {x: -0.011629288, y: -0.029073188}
   m_Size: {x: 0.7992079, y: 0.53174704}
   m_Direction: 1
+--- !u!114 &3121693854349921495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964840362079078166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26159aeaf21b3cf4880d98031b3888f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+--- !u!95 &2078391254338144627
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964840362079078166}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b948bc8d4b617e438fa8d4aba55b692, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

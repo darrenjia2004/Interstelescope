@@ -7,7 +7,7 @@ public class PlayerCollision : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
-    private int health = 4;
+    public int health = 4;
     [SerializeField] GameObject engine;
     [SerializeField] GameObject engineEffect;
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            TakeDamage();
+            TakeDamage(1);
         }
         
     }
@@ -32,25 +32,44 @@ public class PlayerCollision : MonoBehaviour
         if (health <= 0) return;
         if (collision.gameObject.CompareTag("Asteroid"))
         {
-            TakeDamage();
+            int min = collision.gameObject.GetComponent<AsteroidCollision>().health;
+            if (health < min)
+            {
+                min = health;
+            }
+            collision.gameObject.GetComponent<AsteroidCollision>().TakeDamage(min);
+            TakeDamage(min);
+            
         }
+
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage();
+            int min = collision.gameObject.GetComponent<EnemyCollision>().health;
+            if (health < min)
+            {
+                min = health;
+            }
+            collision.gameObject.GetComponent<EnemyCollision>().TakeDamage(min);
+            TakeDamage(min);
+            
         }
     }
     private void Die()
     {
         Destroy(engine);
         Destroy(engineEffect);
-        rb.bodyType = RigidbodyType2D.Static;
-        anim.SetTrigger("death");
         
+        anim.SetTrigger("death");
+        rb.bodyType = RigidbodyType2D.Static;
+        rb.simulated = false;
+        
+
     }
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
         Debug.Log("damage");
-        health--;
+        health-=damage;
         if (health <= 0)
         {
             Die();

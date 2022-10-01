@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2387777333165988441}
   - component: {fileID: 2387777333165988436}
   - component: {fileID: 2387777333165988443}
+  - component: {fileID: 9059890765970185165}
+  - component: {fileID: 7498871407361309515}
   m_Layer: 0
   m_Name: BigAsteroid
   m_TagString: Asteroid
@@ -123,3 +125,36 @@ CircleCollider2D:
   m_Offset: {x: 0.01762104, y: -0.04698944}
   serializedVersion: 2
   m_Radius: 0.46872282
+--- !u!114 &9059890765970185165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387777333165988440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26159aeaf21b3cf4880d98031b3888f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 4
+--- !u!95 &7498871407361309515
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387777333165988440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3409e746977e92840b25b3337ff624da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

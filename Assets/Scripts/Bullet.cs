@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Player"))
             {
-                hitInfo.collider.GetComponent<PlayerCollision>().TakeDamage();
+                hitInfo.collider.GetComponent<PlayerCollision>().TakeDamage(1);
             }
             DestroyBullet();
         }
