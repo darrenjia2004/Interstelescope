@@ -5,10 +5,10 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float bulletSpeed = 15f;
+    public float bulletSpeed = 1f;
     public float lifetime = 5f;
     public LayerMask solidLayers;
-    
+    [SerializeField] GameObject bulletExplosion;
     public float distance;
     private void Start()
     {
@@ -24,6 +24,10 @@ public class Bullet : MonoBehaviour
             {
                 hitInfo.collider.GetComponent<PlayerCollision>().TakeDamage(1);
             }
+            if (hitInfo.collider.CompareTag("Asteroid"))
+            {
+                hitInfo.collider.GetComponent<AsteroidCollision>().TakeDamage(1);
+            }
             DestroyBullet();
         }
         transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime);
@@ -31,6 +35,7 @@ public class Bullet : MonoBehaviour
 
     private void DestroyBullet()
     {
+        Instantiate(bulletExplosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
