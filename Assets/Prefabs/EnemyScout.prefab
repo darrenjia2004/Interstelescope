@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 8027558917996490678}
   - component: {fileID: 8641215139413007417}
   - component: {fileID: 3222101171777814693}
+  - component: {fileID: 453389169452288603}
   m_Layer: 0
   m_Name: EnemyScout
   m_TagString: Enemy
@@ -333,3 +334,19 @@ MonoBehaviour:
   bullet: {fileID: 8724234353484149884, guid: 3b613062e6696764398ec05488e7c9f1, type: 3}
   shootPoint:
   - {fileID: 8176058343167425393}
+--- !u!114 &453389169452288603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8027558917996490669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171ae36ebeab95740b0d99e92ec1ab80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 60
+  speed: 4
+  maxVelocity: 3
+  closeDist: -1

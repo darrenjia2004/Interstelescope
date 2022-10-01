@@ -9,16 +9,20 @@ public class ScoutShoot : MonoBehaviour
     private Animator anim;
     private void Start()
     {
+
         anim = GetComponent<Animator>();
+        print(anim);
     }
+
     private void Update()
     {
         
     }
 
-    private void BeginShooting()
+    public void BeginShooting()
     {
         anim.SetInteger("state", 1);
+
     }
     private void Shoot(int gun)
     {
