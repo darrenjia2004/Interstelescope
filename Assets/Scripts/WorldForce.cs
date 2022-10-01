@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class WorldForce : MonoBehaviour
 {
+    [SerializeField] private float worldForceMagnitude;
+    [SerializeField] public Vector2 forceDirection;
+    private Vector2 appliedForce;
+    [SerializeField] private GameObject player;
+    private Transform playerTransform;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerTransform = player.GetComponent<Transform>();
+        rb = player.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            //float x = 5-(playerTransform.position.x - transform.position.x);
+            //float y = 5-(playerTransform.position.y - transform.position.y);
+            //appliedForce = new Vector2(forceDirection.x * x, forceDirection.y*y);
+            rb.velocity += (Vector2) (forceDirection * worldForceMagnitude * Time.deltaTime);
+        }
     }
 }
