@@ -6,6 +6,7 @@ public class EnemyCollision : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody2D rb;
+    private Player player;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
     public int health;
@@ -16,6 +17,7 @@ public class EnemyCollision : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        player = GameObject.Find("PlayerShip").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,8 @@ public class EnemyCollision : MonoBehaviour
         if (health <= 0) return;
         if (collision.gameObject.CompareTag("Asteroid"))
         {
+            Enlargible e = collision.gameObject.GetComponent<Enlargible>();
+            if (e != null && e.enlarged) player.addBoost();
             int min = collision.gameObject.GetComponent<AsteroidCollision>().health;
             if (health < min)
             {

@@ -7,6 +7,7 @@ public class Enlargible : MonoBehaviour
 {
     Rigidbody2D rb;
     AsteroidCollision ast;
+    public bool enlarged = false;
     [SerializeField] int enlargesLeft = 1;
     private float scale = 2.5f;
     private float targetVelocity = 5f;
@@ -30,6 +31,7 @@ public class Enlargible : MonoBehaviour
     {
         if (--enlargesLeft >= 0)
         {
+            enlarged = true;
             ast.health *= 2;
             rb.velocity = Vector3.zero;
             float expandFactor = Mathf.Pow(scale, 1f / 60f);
