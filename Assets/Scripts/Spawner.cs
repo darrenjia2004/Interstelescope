@@ -9,9 +9,21 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject starOne;
     [SerializeField] GameObject starTwo;
     [SerializeField] GameObject starThree;
+    [SerializeField] GameObject cruiser;
+    [SerializeField] GameObject frigate;
+    [SerializeField] GameObject scout;
+    private float timeSinceEnemySpawn;
+    public float spawnFrequency;
+    [SerializeField] private GameObject gameCamera;
+    private Transform cameraTransform;
+    public float spawnFrequencyMin;
+    public int cruiserThreshold;
+    public int frigateThreshold;
+
     // Start is called before the first frame update
     void Start()
     {
+        cameraTransform = gameCamera.GetComponent<Transform>();
         int nebulaTwoCount = Random.Range(3, 8);
         int nebulaOneCount = Random.Range(3, 8);
         int starOneCount = Random.Range(20, 30);
@@ -92,11 +104,41 @@ public class Spawner : MonoBehaviour
             }
 
         }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+        timeSinceEnemySpawn += Time.deltaTime;
+        if (timeSinceEnemySpawn > spawnFrequency)
+        {
+            float x;
+            float y;
+            do
+            {
+                x = Random.Range(-27f, 27f);
+                y = Random.Range(-15f, 15f);
+            } while (((x < cameraTransform.position.x+9) && (x>cameraTransform.position.x-9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
+            float enemyType = Random.Range(0f, 100f);
+            if (enemyType > cruiserThreshold)
+            {
+                Instantiate(cruiser, new Vector3(x, y, 0), Quaternion.identity);
+            }
+            else if (enemyType > frigateThreshold)
+            {
+                Instantiate(frigate, new Vector3(x, y, 0), Quaternion.identity);
+                cruiserThreshold--;
+            }
+            else
+            {
+                Instantiate(scout, new Vector3(x, y, 0), Quaternion.identity);
+                frigateThreshold--;
+            }
+            spawnFrequency -= 0.1f;
+            if (spawnFrequency < spawnFrequencyMin) spawnFrequency = spawnFrequencyMin;
+            timeSinceEnemySpawn = 0f;
+        }
     }
 }
