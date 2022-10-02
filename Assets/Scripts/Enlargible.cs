@@ -38,6 +38,7 @@ public class Enlargible : MonoBehaviour
             rb.angularVelocity = 0;
             for (int i = 0; i < 60; i++)
             {
+                rb.velocity = Vector3.zero;
                 transform.localScale *= expandFactor;
                 transform.position += moveFactor;
                 yield return new WaitForSeconds(0.02f);
