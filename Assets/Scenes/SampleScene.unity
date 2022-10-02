@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164488818}
   - component: {fileID: 164488820}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LowerWall
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -810,11 +810,17 @@ MonoBehaviour:
   cruiser: {fileID: 5451745665660444712, guid: 6392ae7a03d03b647bc19e7dc194dc0e, type: 3}
   frigate: {fileID: 1352423225980268362, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
   scout: {fileID: 8027558917996490669, guid: c8d1f6431b196d445bcb7d7478b49396, type: 3}
+  bigAsteroid: {fileID: 2387777333165988440, guid: 13d00fc9aa1f34e4bad990fc59fe8f19, type: 3}
+  mediumAsteroid: {fileID: 6964840362079078166, guid: a92d071b3df10e845b545f5a9b6cdb51, type: 3}
+  smallAsteroid: {fileID: 5079317777861218254, guid: 5a945c7b7ac07824d8ab25e481ca21f6, type: 3}
   spawnFrequency: 5
   gameCamera: {fileID: 519420028}
   spawnFrequencyMin: 1
   cruiserThreshold: 90
   frigateThreshold: 60
+  asteroidSpawnFrequency: 1.5
+  bigAsteroidThreshold: 75
+  mediumAsteroidThreshold: 30
 --- !u!1 &703000127
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734175869}
   - component: {fileID: 734175871}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftWall
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -1113,7 +1119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620096093}
   - component: {fileID: 1620096095}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: UpperWall
   m_TagString: Border
   m_Icon: {fileID: 0}
@@ -1171,7 +1177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701288318}
   - component: {fileID: 1701288320}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightWall
   m_TagString: Border
   m_Icon: {fileID: 0}

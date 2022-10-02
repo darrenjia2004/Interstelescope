@@ -12,6 +12,9 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject cruiser;
     [SerializeField] GameObject frigate;
     [SerializeField] GameObject scout;
+    [SerializeField] GameObject bigAsteroid;
+    [SerializeField] GameObject mediumAsteroid;
+    [SerializeField] GameObject smallAsteroid;
     private float timeSinceEnemySpawn;
     public float spawnFrequency;
     [SerializeField] private GameObject gameCamera;
@@ -19,6 +22,10 @@ public class Spawner : MonoBehaviour
     public float spawnFrequencyMin;
     public int cruiserThreshold;
     public int frigateThreshold;
+    private float timeSinceAsteroidSpawn;
+    public float asteroidSpawnFrequency;
+    public int bigAsteroidThreshold;
+    public int mediumAsteroidThreshold;
 
     // Start is called before the first frame update
     void Start()
@@ -139,6 +146,32 @@ public class Spawner : MonoBehaviour
             spawnFrequency -= 0.1f;
             if (spawnFrequency < spawnFrequencyMin) spawnFrequency = spawnFrequencyMin;
             timeSinceEnemySpawn = 0f;
+        }
+
+        timeSinceAsteroidSpawn += Time.deltaTime;
+        if (timeSinceAsteroidSpawn > asteroidSpawnFrequency)
+        {
+            float x;
+            float y;
+            do
+            {
+                x = Random.Range(-27f, 27f);
+                y = Random.Range(-15f, 15f);
+            } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
+            float asteroidType = Random.Range(0f, 100f);
+            if (asteroidType > bigAsteroidThreshold)
+            {
+                Instantiate(bigAsteroid, new Vector3(x, y, 0), Quaternion.identity);
+            }
+            else if (asteroidType > mediumAsteroidThreshold)
+            {
+                Instantiate(mediumAsteroid, new Vector3(x, y, 0), Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(smallAsteroid, new Vector3(x, y, 0), Quaternion.identity);
+            }
+            timeSinceAsteroidSpawn = 0f;
         }
     }
 }

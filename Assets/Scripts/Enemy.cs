@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float speed = 4f;
     [SerializeField] protected float maxVelocity = 3f;
 
-    [SerializeField] float closeDist = -1;
+    [SerializeField] protected float closeDist = -1;
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(far());
     }
 
-    IEnumerator findPlayer()
+    protected IEnumerator findPlayer()
     {
         while (Vector3.Distance(transform.position, player.transform.position) > closeDist)
         {

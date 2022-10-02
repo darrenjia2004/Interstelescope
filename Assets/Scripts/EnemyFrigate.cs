@@ -15,13 +15,14 @@ public class EnemyFrigate : Enemy
     {
         rb.velocity = Vector3.zero;
         StartCoroutine(shoot());
-        while (true)
+        while (Vector3.Distance(transform.position, player.transform.position) < 2*closeDist)
         {
             Vector3 direction = player.transform.position - transform.position;
             rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
             rb.velocity = Vector3.zero;
             yield return null;
         }
+        StartCoroutine(findPlayer());
     }
     
     private IEnumerator shoot()
