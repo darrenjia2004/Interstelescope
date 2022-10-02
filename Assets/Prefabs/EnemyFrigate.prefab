@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 6461822753418144148}
   - component: {fileID: 6782261613124231875}
   - component: {fileID: 2147343094792213421}
+  - component: {fileID: 8855321198750990416}
   m_Layer: 0
   m_Name: EnemyFrigate
   m_TagString: Enemy
@@ -311,6 +312,22 @@ MonoBehaviour:
   - {fileID: 7763482773074693337}
   - {fileID: 3741534863988590232}
 --- !u!114 &2147343094792213421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671807516420405693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8709f7f1ccdfe4c80933c8bb78d544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 40
+  speed: 3
+  maxVelocity: 2
+  closeDist: 10
+--- !u!114 &8855321198750990416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
