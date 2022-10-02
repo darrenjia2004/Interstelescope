@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject bigAsteroid;
     [SerializeField] GameObject mediumAsteroid;
     [SerializeField] GameObject smallAsteroid;
+    [SerializeField] GameObject blackHole;
     private float timeSinceEnemySpawn;
     public float spawnFrequency;
     [SerializeField] private GameObject gameCamera;
@@ -26,19 +27,22 @@ public class Spawner : MonoBehaviour
     public float asteroidSpawnFrequency;
     public int bigAsteroidThreshold;
     public int mediumAsteroidThreshold;
+    private float horizontalMax = 36f;
+    private float verticalMax = 20f;
 
     // Start is called before the first frame update
     void Start()
     {
         cameraTransform = gameCamera.GetComponent<Transform>();
-        int asteroidOneCount = Random.Range(10, 15);
-        int asteroidTwoCount = Random.Range(10, 15);
-        int asteroidThreeCount = Random.Range(10, 15);
-        int nebulaTwoCount = Random.Range(3, 8);
-        int nebulaOneCount = Random.Range(3, 8);
-        int starOneCount = Random.Range(20, 30);
-        int starTwoCount = Random.Range(20, 30);
-        int starThreeCount = Random.Range(20, 30);
+        int blackHoleCount = Random.Range(1, 5);
+        int asteroidOneCount = Random.Range(15, 25);
+        int asteroidTwoCount = Random.Range(15, 25);
+        int asteroidThreeCount = Random.Range(15, 25);
+        int nebulaTwoCount = Random.Range(6, 16);
+        int nebulaOneCount = Random.Range(6, 16);
+        int starOneCount = Random.Range(40, 60);
+        int starTwoCount = Random.Range(40, 60);
+        int starThreeCount = Random.Range(40, 60);
         float nebulaOneRadius = nebulaTwo.GetComponent<Collider2D>().bounds.extents.x;
         float nebulaTwoRadius = nebulaTwo.GetComponent<Collider2D>().bounds.extents.x;
         float starOneRadius = starOne.GetComponent<Collider2D>().bounds.extents.x;
@@ -49,8 +53,8 @@ public class Spawner : MonoBehaviour
         float asteroidThreeRadius = smallAsteroid.GetComponent<Collider2D>().bounds.extents.x;
         for (int i = 0; i < nebulaTwoCount; i++)
         {
-            float x = Random.Range(-27f, 27f);
-            float y = Random.Range(-15f, 15f);
+            float x = Random.Range(-horizontalMax, horizontalMax);
+            float y = Random.Range(-verticalMax, verticalMax);
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
             Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, nebulaTwoRadius, LayerMask.GetMask("Nebula"));
@@ -63,8 +67,8 @@ public class Spawner : MonoBehaviour
         }
         for (int i = 0; i < nebulaOneCount; i++)
         {
-            float x = Random.Range(-27f, 27f);
-            float y = Random.Range(-15f, 15f);
+            float x = Random.Range(-horizontalMax, horizontalMax);
+            float y = Random.Range(-verticalMax, verticalMax);
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
             Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, nebulaOneRadius, LayerMask.GetMask("Nebula"));
@@ -77,8 +81,8 @@ public class Spawner : MonoBehaviour
         }
         for (int i = 0; i < starOneCount; i++)
         {
-            float x = Random.Range(-27f, 27f);
-            float y = Random.Range(-15f, 15f);
+            float x = Random.Range(-horizontalMax, horizontalMax);
+            float y = Random.Range(-verticalMax, verticalMax);
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
             Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, starOneRadius, LayerMask.GetMask("Star"));
@@ -91,8 +95,8 @@ public class Spawner : MonoBehaviour
         }
         for (int i = 0; i < starTwoCount; i++)
         {
-            float x = Random.Range(-27f, 27f);
-            float y = Random.Range(-15f, 15f);
+            float x = Random.Range(-horizontalMax, horizontalMax);
+            float y = Random.Range(-verticalMax, verticalMax);
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
             Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, starTwoRadius, LayerMask.GetMask("Star"));
@@ -105,8 +109,8 @@ public class Spawner : MonoBehaviour
         }
         for (int i = 0; i < starThreeCount; i++)
         {
-            float x = Random.Range(-27f, 27f);
-            float y = Random.Range(-15f, 15f);
+            float x = Random.Range(-horizontalMax, horizontalMax);
+            float y = Random.Range(-verticalMax, verticalMax);
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
             Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, starThreeRadius, LayerMask.GetMask("Star"));
@@ -123,8 +127,8 @@ public class Spawner : MonoBehaviour
             float y;
             do
             {
-                x = Random.Range(-27f, 27f);
-                y = Random.Range(-15f, 15f);
+                x = Random.Range(-horizontalMax, horizontalMax);
+                y = Random.Range(-verticalMax, verticalMax);
             } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
@@ -142,8 +146,8 @@ public class Spawner : MonoBehaviour
             float y;
             do
             {
-                x = Random.Range(-27f, 27f);
-                y = Random.Range(-15f, 15f);
+                x = Random.Range(-horizontalMax, horizontalMax);
+                y = Random.Range(-verticalMax, verticalMax);
             } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
@@ -161,8 +165,8 @@ public class Spawner : MonoBehaviour
             float y;
             do
             {
-                x = Random.Range(-27f, 27f);
-                y = Random.Range(-15f, 15f);
+                x = Random.Range(-horizontalMax, horizontalMax);
+                y = Random.Range(-verticalMax, verticalMax);
             } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
             Vector2 spawnPoint = new Vector2(x, y);
             //Assuming you are 2D
@@ -172,6 +176,20 @@ public class Spawner : MonoBehaviour
             {
                 Instantiate(smallAsteroid, new Vector3(x, y, 0), Quaternion.identity);
             }
+
+        }
+        for (int i = 0; i < blackHoleCount; i++)
+        {
+            float x;
+            float y;
+            do
+            {
+                x = Random.Range(-horizontalMax, horizontalMax);
+                y = Random.Range(-verticalMax, verticalMax);
+            } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
+            Vector2 spawnPoint = new Vector2(x, y);
+            //Assuming you are 2D
+            Instantiate(blackHole, new Vector3(x, y, 0), Quaternion.identity);
 
         }
 

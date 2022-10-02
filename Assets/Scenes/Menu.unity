@@ -2301,7 +2301,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 86}
-  m_SizeDelta: {x: 700, y: 300}
+  m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873372508
 MonoBehaviour:
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GameNAME
+  m_text: Intersteloscope
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40650d2328af9b145ab0403ed9d5b0da, type: 2}
   m_sharedMaterial: {fileID: 2404455344942291676, guid: 40650d2328af9b145ab0403ed9d5b0da, type: 2}
@@ -2350,8 +2350,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
