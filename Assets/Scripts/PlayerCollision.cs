@@ -12,6 +12,10 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] GameObject engineEffect;
     [SerializeField] GameObject canvasObject;
     [SerializeField] GameObject timerText;
+    public int shield = 2;
+    private int maxshield = 2;
+    private float shieldRecovery;
+    private float shieldRechargeRate=4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,16 @@ public class PlayerCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        shieldRecovery += Time.deltaTime;
+        if (shield >= maxshield)
+        {
+            shieldRecovery = 0;
+        }
+        if (shieldRecovery > shieldRechargeRate)
+        {
+            shield++;
+            shieldRecovery = 0;
+        }
         if (Input.GetKeyDown("space"))
         {
             TakeDamage(1);
@@ -72,8 +86,17 @@ public class PlayerCollision : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        Debug.Log("damage");
-        health-=damage;
+        if (damage <= shield)
+        {
+            shield -= damage;
+        }
+        else
+        {
+            damage -= shield;
+            shield = 0;
+            health -= damage;
+        }
+        
         if (health <= 0)
         {
             Die();
