@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 public class PlayerCollision : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -10,9 +10,12 @@ public class PlayerCollision : MonoBehaviour
     public int health = 4;
     [SerializeField] GameObject engine;
     [SerializeField] GameObject engineEffect;
+    [SerializeField] GameObject canvasObject;
+    [SerializeField] GameObject timerText;
     // Start is called before the first frame update
     void Start()
     {
+        canvasObject.SetActive(false);
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -59,7 +62,8 @@ public class PlayerCollision : MonoBehaviour
     {
         Destroy(engine);
         Destroy(engineEffect);
-        
+        timerText.GetComponent<TimeCount>().PassTime();
+        timerText.SetActive(false);
         anim.SetTrigger("death");
         rb.bodyType = RigidbodyType2D.Static;
         rb.simulated = false;
@@ -89,8 +93,11 @@ public class PlayerCollision : MonoBehaviour
         
 
     }
-    private void RestartLevel()
+    private void DisplayCanvas()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+        canvasObject.SetActive(true);
+        
     }
+    
 }

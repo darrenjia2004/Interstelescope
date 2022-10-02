@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 150
-  speed: 5
+  speed: 3
 --- !u!50 &8294073174943621481
 Rigidbody2D:
   serializedVersion: 4
@@ -193,6 +193,8 @@ MonoBehaviour:
   health: 4
   engine: {fileID: 5466953047949676740}
   engineEffect: {fileID: 5466953047345350347}
+  canvasObject: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!1 &5466953047345350347
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,6 +31,9 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         cameraTransform = gameCamera.GetComponent<Transform>();
+        int asteroidOneCount = Random.Range(10, 15);
+        int asteroidTwoCount = Random.Range(10, 15);
+        int asteroidThreeCount = Random.Range(10, 15);
         int nebulaTwoCount = Random.Range(3, 8);
         int nebulaOneCount = Random.Range(3, 8);
         int starOneCount = Random.Range(20, 30);
@@ -41,6 +44,9 @@ public class Spawner : MonoBehaviour
         float starOneRadius = starOne.GetComponent<Collider2D>().bounds.extents.x;
         float starTwoRadius = starTwo.GetComponent<Collider2D>().bounds.extents.x;
         float starThreeRadius = starThree.GetComponent<Collider2D>().bounds.extents.x;
+        float asteroidOneRadius = bigAsteroid.GetComponent<Collider2D>().bounds.extents.x;
+        float asteroidTwoRadius = mediumAsteroid.GetComponent<Collider2D>().bounds.extents.x;
+        float asteroidThreeRadius = smallAsteroid.GetComponent<Collider2D>().bounds.extents.x;
         for (int i = 0; i < nebulaTwoCount; i++)
         {
             float x = Random.Range(-27f, 27f);
@@ -111,7 +117,64 @@ public class Spawner : MonoBehaviour
             }
 
         }
-        
+        for (int i = 0; i < asteroidOneCount; i++)
+        {
+            float x;
+            float y;
+            do
+            {
+                x = Random.Range(-27f, 27f);
+                y = Random.Range(-15f, 15f);
+            } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
+            Vector2 spawnPoint = new Vector2(x, y);
+            //Assuming you are 2D
+            Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, asteroidOneRadius, LayerMask.GetMask("Asteroid"));
+            //If the Collision is empty then, we can instantiate
+            if (CollisionWithEnemy == false)
+            {
+                Instantiate(bigAsteroid, new Vector3(x, y, 0), Quaternion.identity);
+            }
+
+        }
+        for (int i = 0; i < asteroidTwoCount; i++)
+        {
+            float x;
+            float y;
+            do
+            {
+                x = Random.Range(-27f, 27f);
+                y = Random.Range(-15f, 15f);
+            } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
+            Vector2 spawnPoint = new Vector2(x, y);
+            //Assuming you are 2D
+            Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, asteroidTwoRadius, LayerMask.GetMask("Asteroid"));
+            //If the Collision is empty then, we can instantiate
+            if (CollisionWithEnemy == false)
+            {
+                Instantiate(mediumAsteroid, new Vector3(x, y, 0), Quaternion.identity);
+            }
+
+        }
+        for (int i = 0; i < asteroidThreeCount; i++)
+        {
+            float x;
+            float y;
+            do
+            {
+                x = Random.Range(-27f, 27f);
+                y = Random.Range(-15f, 15f);
+            } while (((x < cameraTransform.position.x + 9) && (x > cameraTransform.position.x - 9)) && ((y < cameraTransform.position.y + 5) && (y > cameraTransform.position.y - 5)));
+            Vector2 spawnPoint = new Vector2(x, y);
+            //Assuming you are 2D
+            Collider2D CollisionWithEnemy = Physics2D.OverlapCircle(spawnPoint, asteroidThreeRadius, LayerMask.GetMask("Asteroid"));
+            //If the Collision is empty then, we can instantiate
+            if (CollisionWithEnemy == false)
+            {
+                Instantiate(smallAsteroid, new Vector3(x, y, 0), Quaternion.identity);
+            }
+
+        }
+
     }
 
     // Update is called once per frame
