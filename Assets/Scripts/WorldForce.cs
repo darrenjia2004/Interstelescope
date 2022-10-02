@@ -26,9 +26,6 @@ public class WorldForce : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //float x = 5-(playerTransform.position.x - transform.position.x);
-            //float y = 5-(playerTransform.position.y - transform.position.y);
-            //appliedForce = new Vector2(forceDirection.x * x, forceDirection.y*y);
             rb.velocity += (Vector2) (forceDirection * worldForceMagnitude * Time.deltaTime);
         }
     }
