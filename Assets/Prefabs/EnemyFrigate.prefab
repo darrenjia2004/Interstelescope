@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3671807515783785392}
   - component: {fileID: 3671807515783785394}
   - component: {fileID: 3671807515783785393}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Nautolan Ship - Frigate - Engine Effect_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,8 +121,12 @@ GameObject:
   - component: {fileID: 6461822753418144148}
   - component: {fileID: 6782261613124231875}
   - component: {fileID: 2147343094792213421}
+<<<<<<< HEAD
   - component: {fileID: 8855321198750990416}
   m_Layer: 0
+=======
+  m_Layer: 9
+>>>>>>> origin
   m_Name: EnemyFrigate
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -352,7 +356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7763482773074693337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shootpoint0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3741534863988590232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shootpoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

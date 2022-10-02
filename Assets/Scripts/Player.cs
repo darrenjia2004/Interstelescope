@@ -26,5 +26,6 @@ public class Player : MonoBehaviour
         rb.velocity += (Vector2) (transform.rotation * moveSpeed);
         //transform.position += movement;
     }
+    
 
 }
