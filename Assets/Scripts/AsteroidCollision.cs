@@ -20,10 +20,6 @@ public class AsteroidCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            TakeDamage(1);
-        }
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -40,7 +36,6 @@ public class AsteroidCollision : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        Debug.Log("damage");
         health -= damage;
         if (health <= 0)
         {
