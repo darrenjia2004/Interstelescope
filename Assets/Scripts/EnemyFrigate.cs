@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyFrigate : Enemy
 {
-    FrigateShoot shooter;
+    EnemyShoot shooter;
 
     public override void Start()
     {
-        shooter = GetComponent<FrigateShoot>();
+        shooter = GetComponent<EnemyShoot>();
         base.Start();
     }
     protected override IEnumerator close()

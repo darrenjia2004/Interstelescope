@@ -808,7 +808,7 @@ MonoBehaviour:
   starTwo: {fileID: 434997753331113494, guid: d959ee4e923360d45940b113b45e511d, type: 3}
   starThree: {fileID: 7077476644462870596, guid: 3405f96c47ee7d54fb1fcb2591bd998c, type: 3}
   cruiser: {fileID: 5451745665660444712, guid: 6392ae7a03d03b647bc19e7dc194dc0e, type: 3}
-  frigate: {fileID: 3671807516420405693, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
+  frigate: {fileID: 1352423225980268362, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
   scout: {fileID: 8027558917996490669, guid: c8d1f6431b196d445bcb7d7478b49396, type: 3}
   spawnFrequency: 5
   gameCamera: {fileID: 519420028}
@@ -1103,63 +1103,6 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 117559257}
   m_ConfineScreenEdges: 1
   m_Damping: 0.52
---- !u!1001 &1588711502
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3671807516420405693, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_Name
-      value: Nautolan Ship - Frigate - Base
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3671807516420405695, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 11cf33a5610c3964c8fa490f3dab30df, type: 3}
 --- !u!1 &1620096092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1424,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6381d491d7b8ae4fb2d98c2e66debbb, type: 3}
+--- !u!1001 &1352423225404241717
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1352423225980268362, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_Name
+      value: Nautolan Ship - Frigate - Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352423225980268466, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 90c8a4f34e3206645a5c889d8d135513, type: 3}
 --- !u!1001 &2387777332279519196
 PrefabInstance:
   m_ObjectHideFlags: 0

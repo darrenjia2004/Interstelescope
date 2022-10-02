@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public LayerMask solidLayers;
     [SerializeField] GameObject bulletExplosion;
     public float distance;
+    private Vector2 svelocity;
     private void Start()
     {
         Invoke("DestroyBullet", lifetime);
@@ -17,7 +18,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector3.up, distance, solidLayers);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, solidLayers);
         if (hitInfo.collider != null)
         {
             if (hitInfo.collider.CompareTag("Player"))
@@ -30,12 +31,17 @@ public class Bullet : MonoBehaviour
             }
             DestroyBullet();
         }
-        transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime);
+        transform.Translate((Vector2.up * bulletSpeed) * Time.deltaTime);
+        transform.Translate(svelocity * Time.deltaTime, Space.World);
     }
 
     private void DestroyBullet()
     {
         Instantiate(bulletExplosion, transform.position, transform.rotation);
         Destroy(gameObject);
+    }
+    public void PassShipVelocity(Vector2 velocity)
+    {
+        svelocity = velocity;
     }
 }

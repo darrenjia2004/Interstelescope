@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyScout : Enemy
 {
-    ScoutShoot shooter;
+    EnemyShoot shooter;
 
     public override void Start()
     {
-        shooter = GetComponent<ScoutShoot>();
+        shooter = GetComponent<EnemyShoot>();
         base.Start();
     }
     protected override IEnumerator far()

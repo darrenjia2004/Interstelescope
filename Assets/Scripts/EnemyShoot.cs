@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoutShoot : MonoBehaviour
+public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform[] shootPoint;
+    private Rigidbody2D rb;
     private Animator anim;
+    private GameObject lastBullet;
     private void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         print(anim);
     }
@@ -26,7 +28,8 @@ public class ScoutShoot : MonoBehaviour
     }
     private void Shoot(int gun)
     {
-        Instantiate(bullet, shootPoint[gun].position, transform.rotation);
+        lastBullet = Instantiate(bullet, shootPoint[gun].position, transform.rotation);
+        lastBullet.GetComponent<Bullet>().PassShipVelocity(rb.velocity);
     }
     private void EndShooting()
     {
